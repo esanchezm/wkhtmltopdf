@@ -1,0 +1,27 @@
+{
+    "name": "esanchezm/wkhtmltopdf",
+    "type": "library",
+    "description": "wkhtmltopdf wrapper",
+    "keywords": ["wkhtmltopdf", "pdf", "generator"],
+    "homepage": "https://github.com/esanchezm/wkhtmltopdf/",
+    "authors": [
+        {
+            "name" : "Christian Sciberras"
+        },
+        {
+            "name" : "Esteban Sánchez"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-curl": "0"
+    },
+    "post-install-cmd": [
+        "wkhtmltopdf\\WKPDF::download_binary",
+        "phpunit -c app/"
+    ],
+    "autoload": {
+        "psr-0": {"PhpAmqpLib": ""}
+    },
+    "license": "None"
+}
